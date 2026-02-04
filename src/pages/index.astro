@@ -1,0 +1,199 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import Button from "../components/Button.astro";
+import { PencilRuler, Shovel, Mountain, CheckCircle } from "lucide-react";
+
+// Images
+import garden1 from "../assets/images/garden-1.webp";
+import garden2 from "../assets/images/garden-2.webp";
+import garden3 from "../assets/images/garden-3.webp";
+---
+
+<Layout title="DJ Verbeek Tuinen | Hovenier Ophemert & Betuwe">
+    <Navbar />
+    <main>
+        <Hero />
+
+        <!-- Services Section -->
+        <section class="py-20 bg-surface relative overflow-hidden">
+            <!-- Decorative Elements -->
+            <div class="absolute top-0 right-0 w-96 h-96 opacity-[0.03] pointer-events-none">
+                <svg viewBox="0 0 200 200" fill="currentColor" class="text-primary w-full h-full">
+                    <path d="M100,10 Q140,50 100,100 Q60,150 100,190 M100,100 Q50,80 20,100 M100,100 Q150,80 180,100 M100,100 Q80,60 100,30 M100,100 Q120,140 100,170" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <circle cx="100" cy="100" r="8" />
+                    <circle cx="20" cy="100" r="4" />
+                    <circle cx="180" cy="100" r="4" />
+                    <circle cx="100" cy="30" r="4" />
+                    <circle cx="100" cy="170" r="4" />
+                </svg>
+            </div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 opacity-[0.03] pointer-events-none">
+                <svg viewBox="0 0 100 100" fill="currentColor" class="text-primary w-full h-full">
+                    <path d="M50,90 C50,90 20,70 20,40 C20,20 35,10 50,10 C65,10 80,20 80,40 C80,70 50,90 50,90" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    <path d="M50,10 L50,90" stroke="currentColor" stroke-width="1" fill="none"/>
+                    <path d="M35,30 Q50,40 65,30" stroke="currentColor" stroke-width="1" fill="none"/>
+                    <path d="M30,50 Q50,60 70,50" stroke="currentColor" stroke-width="1" fill="none"/>
+                </svg>
+            </div>
+
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <!-- Section Label -->
+                <span class="inline-block text-accent font-sans font-medium tracking-widest text-sm uppercase mb-4">Wat wij doen</span>
+                <h2 class="text-3xl font-serif font-bold text-primary mb-4">
+                    Onze Diensten
+                </h2>
+                <p class="text-text-muted max-w-2xl mx-auto">
+                    Complete service voor uw tuin. Van het eerste schetsontwerp
+                    tot het jaarlijkse onderhoud.
+                </p>
+                <!-- Decorative Line -->
+                <div class="flex items-center justify-center gap-3 mt-6 mb-10">
+                    <div class="w-12 h-px bg-primary/20"></div>
+                    <div class="w-2 h-2 rotate-45 border border-primary/30"></div>
+                    <div class="w-12 h-px bg-primary/20"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <ServiceCard
+                        title="Tuinontwerp"
+                        description="Wij komen bij u langs om uw wensen in kaart te brengen en maken een gedetailleerd 3D-ontwerp van uw toekomstige tuin."
+                        icon={PencilRuler}
+                        href="/diensten/tuinontwerp"
+                    />
+                    <ServiceCard
+                        title="Tuinaanleg"
+                        description="Van ontwerp tot oplevering. Straatwerk, borders, bomen en buitenverblijven – wij creëren een tuin waarin u echt tot rust kunt komen."
+                        icon={Shovel}
+                        href="/diensten/tuinaanleg"
+                    />
+                    <ServiceCard
+                        title="Grondwerk"
+                        description="Een goede basis voor uw buitenleven. Uitgraven, egaliseren of voorbereidend werk – wij zorgen dat alles tot in de bodem goed zit."
+                        icon={Mountain}
+                        href="/diensten/grondwerk"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Teaser -->
+        <section class="py-20 bg-white relative overflow-hidden">
+            <!-- Decorative Corner Accents -->
+            <div class="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-primary/10 pointer-events-none"></div>
+            <div class="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-primary/10 pointer-events-none"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex items-end justify-between mb-12">
+                    <div class="max-w-2xl">
+                        <span
+                            class="text-accent font-sans font-medium tracking-widest text-sm uppercase mb-2 block"
+                            >Recent Werk</span
+                        >
+                        <h2 class="text-4xl font-serif font-bold text-primary">
+                            Natuurlijk Resultaat.
+                        </h2>
+                        <div class="w-20 h-1 bg-gradient-to-r from-primary to-primary/20 mt-4"></div>
+                    </div>
+                    <div class="hidden md:block">
+                        <Button href="/projecten" variant="secondary"
+                            >Bekijk Alle Projecten</Button
+                        >
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <ProjectCard
+                        title="Moderne Stadstuin"
+                        category="Tuinaanleg"
+                        image={garden1}
+                        href="/projecten/moderne-stadstuin"
+                    />
+                    <ProjectCard
+                        title="Vrijstaande Villatuin"
+                        category="Tuinontwerp"
+                        image={garden2}
+                        href="/projecten/vrijstaande-villatuin"
+                    />
+                    <ProjectCard
+                        title="Onderhoud Bedrijfstuin"
+                        category="Grondwerk"
+                        image={garden3}
+                        href="/projecten/bedrijfstuin"
+                    />
+                </div>
+
+                <div class="mt-12 text-center md:hidden">
+                    <Button href="/projecten" variant="secondary" class="w-full"
+                        >Bekijk Alle Projecten</Button
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Section -->
+        <section class="py-20 bg-primary text-white relative overflow-hidden">
+            <div
+                class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"
+            >
+            </div>
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-12 text-white">
+                    Waarom kiezen voor DJ Verbeek?
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <div
+                        class="bg-white/10 backdrop-blur p-8 border border-white/20 hover:bg-white/15 transition-colors"
+                    >
+                        <h3 class="text-xl font-bold mb-4 font-serif text-white">
+                            Persoonlijk Contact
+                        </h3>
+                        <p class="text-white/90 leading-relaxed">
+                            Eén aanspreekpunt voor uw hele project. Korte lijnen
+                            en duidelijke afspraken. Wij luisteren écht naar wat
+                            u wilt.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white/10 backdrop-blur p-8 border border-white/20 hover:bg-white/15 transition-colors"
+                    >
+                        <h3 class="text-xl font-bold mb-4 font-serif text-white">
+                            Ervaring & Vakmanschap
+                        </h3>
+                        <p class="text-white/90 leading-relaxed">
+                            Jarenlange ervaring in het groen. Wij werken met de
+                            beste materialen en leveren kwaliteit die jarenlang
+                            meegaat.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white/10 backdrop-blur p-8 border border-white/20 hover:bg-white/15 transition-colors"
+                    >
+                        <h3 class="text-xl font-bold mb-4 font-serif text-white">
+                            Duidelijke Afspraken
+                        </h3>
+                        <p class="text-white/90 leading-relaxed">
+                            Geen verrassingen achteraf. U weet precies waar u
+                            aan toe bent qua planning en kosten. Afspraak is
+                            afspraak.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <Button
+                        href="/contact"
+                        size="lg"
+                        class="bg-white text-primary hover:bg-white/90"
+                    >
+                        Maak een Vrijblijvende Afspraak
+                    </Button>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

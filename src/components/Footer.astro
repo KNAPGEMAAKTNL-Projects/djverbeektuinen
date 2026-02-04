@@ -1,0 +1,169 @@
+---
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-primary text-white pt-20 pb-10 border-t border-white/10 relative overflow-hidden">
+    <!-- Decorative Pattern -->
+    <div class="absolute top-0 right-0 w-96 h-96 opacity-[0.03] pointer-events-none">
+        <svg viewBox="0 0 200 200" class="w-full h-full" fill="none" stroke="currentColor" stroke-width="0.5">
+            <circle cx="100" cy="100" r="20"/>
+            <circle cx="100" cy="100" r="40"/>
+            <circle cx="100" cy="100" r="60"/>
+            <circle cx="100" cy="100" r="80"/>
+            <circle cx="100" cy="100" r="100"/>
+        </svg>
+    </div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 opacity-[0.03] pointer-events-none">
+        <svg viewBox="0 0 100 100" class="w-full h-full" fill="none" stroke="currentColor" stroke-width="0.5">
+            <path d="M50,90 C50,90 20,70 20,40 C20,20 35,10 50,10 C65,10 80,20 80,40 C80,70 50,90 50,90"/>
+            <path d="M50,10 L50,90"/>
+        </svg>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <!-- Brand -->
+            <div>
+                <h3 class="font-serif text-2xl font-bold mb-6 text-white">DJ Verbeek</h3>
+                <p class="text-white/70 leading-relaxed mb-6">
+                    Vakmanschap in tuinontwerp, aanleg en onderhoud. Wij
+                    realiseren tuinen waar u écht tot rust komt.
+                </p>
+                <div class="flex gap-4">
+                    <a
+                        href="#"
+                        class="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors"
+                        aria-label="Facebook"
+                    >
+                        <Facebook className="w-5 h-5" />
+                    </a>
+                    <a
+                        href="#"
+                        class="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors"
+                        aria-label="Instagram"
+                    >
+                        <Instagram className="w-5 h-5" />
+                    </a>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div>
+                <h4 class="font-serif font-semibold text-lg mb-6 text-white">Navigatie</h4>
+                <ul class="space-y-4">
+                    <li>
+                        <a
+                            href="/"
+                            class="text-white/70 hover:text-white transition-colors"
+                            >Home</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/diensten/tuinontwerp"
+                            class="text-white/70 hover:text-white transition-colors"
+                            >Tuinontwerp</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/diensten/tuinaanleg"
+                            class="text-white/70 hover:text-white transition-colors"
+                            >Tuinaanleg</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/diensten/grondwerk"
+                            class="text-white/70 hover:text-white transition-colors"
+                            >Grondwerk</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/contact"
+                            class="text-white/70 hover:text-white transition-colors"
+                            >Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="font-serif font-semibold text-lg mb-6 text-white">Diensten</h4>
+                <ul class="space-y-4">
+                    <li>
+                        <a
+                            href="/diensten/tuinontwerp"
+                            class="text-white/70 hover:text-white transition-colors"
+                            >Tuinontwerp</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/diensten/tuinaanleg"
+                            class="text-white/70 hover:text-white transition-colors"
+                            >Tuinaanleg</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/diensten/grondwerk"
+                            class="text-white/70 hover:text-white transition-colors"
+                            >Grondwerk</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="font-serif font-semibold text-lg mb-6 text-white">Contact</h4>
+                <p class="text-white/70 mb-4">Dirk Jan Verbeek</p>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-4">
+                        <MapPin
+                            className="w-5 h-5 text-green-400 mt-1 shrink-0"
+                        />
+                        <span class="text-white/70">
+                            Akkersestraat 3a<br />
+                            4061BG Ophemert
+                        </span>
+                    </li>
+                    <li>
+                        <a
+                            href="tel:+31629101019"
+                            class="flex items-center gap-4 text-white/70 hover:text-white transition-colors"
+                        >
+                            <Phone
+                                className="w-5 h-5 text-green-400 shrink-0"
+                            />
+                            +31 6 29101019
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="mailto:Djverbeektuinen@outlook.com"
+                            class="flex items-center gap-4 text-white/70 hover:text-white transition-colors"
+                        >
+                            <Mail className="w-5 h-5 text-green-400 shrink-0" />
+                            Djverbeektuinen@outlook.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div
+            class="pt-8 border-t border-white/10 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-sm text-white/40"
+        >
+            <p>
+                &copy; {currentYear} DJ Verbeek Tuinen. Alle rechten voorbehouden.
+            </p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors"
+                    >Privacyverklaring</a
+                >
+                <a href="#" class="hover:text-white transition-colors"
+                    >Algemene Voorwaarden</a
+                >
+            </div>
+        </div>
+    </div>
+</footer>

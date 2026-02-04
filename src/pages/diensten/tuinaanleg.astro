@@ -1,0 +1,146 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import Button from "../../components/Button.astro";
+import { CheckCircle2, Shovel } from "lucide-react";
+import { Image } from "astro:assets";
+import garden4 from "../../assets/images/garden-4.webp";
+---
+
+<Layout title="Tuinaanleg | DJ Verbeek Tuinen">
+    <Navbar />
+    <main>
+        <PageHeader title="Tuinaanleg" subtitle="Van Ontwerp tot Oplevering" />
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-px bg-primary/30"></div>
+                            <span class="text-accent font-sans font-medium tracking-widest text-xs uppercase">Complete Realisatie</span>
+                        </div>
+                        <h2 class="text-3xl font-serif font-bold text-primary mb-6">
+                            Het Aanleggen van uw Buitenparadijs
+                        </h2>
+                        <div class="space-y-6 text-text-muted leading-relaxed">
+                            <p>
+                                Heeft u ruimte rondom uw woning? Dan wilt u daar natuurlijk volop van
+                                genieten. Wat is er mooier dan een groene, leefbare tuin voor het hele
+                                gezin? DJVerbeekTuinen is gespecialiseerd in de aanleg van tuinen die
+                                perfect aansluiten bij uw wensen en leefstijl.
+                            </p>
+                            <p>
+                                Door elementen zoals straatwerk, borders, bomen, hagen en buitenverblijven
+                                te combineren, creëren wij een tuin waarin u echt tot rust kunt komen.
+                            </p>
+                            <p>
+                                Ook voor bedrijven biedt DJVerbeekTuinen uitkomst. Zoekt u een representatief
+                                en onderhoudsvriendelijk bedrijfsterrein of een verzorgde tuin naast uw pand?
+                                Wij zorgen voor een duurzame en groene omgeving, volledig afgestemd op uw huisstijl.
+                            </p>
+                        </div>
+
+                        <div class="mt-10 space-y-4">
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Straatwerk & Bestrating</span>
+                                    <span class="text-text-muted text-sm">Terrassen, paden en opritten vakkundig aangelegd</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Beplanting</span>
+                                    <span class="text-text-muted text-sm">Borders, hagen, bomen en gazon</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Buitenverblijven</span>
+                                    <span class="text-text-muted text-sm">Overkappingen, tuinhuizen en pergola's</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Bedrijfstuinen</span>
+                                    <span class="text-text-muted text-sm">Representatief en onderhoudsvriendelijk</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/10"></div>
+                        <div class="aspect-[4/3] bg-gray-100 overflow-hidden relative z-10">
+                            <Image
+                                src={garden4}
+                                alt="Tuinaanleg in uitvoering"
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div class="absolute -top-6 -left-6 bg-primary text-white p-4 z-20">
+                            <Shovel className="w-8 h-8" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Approach -->
+        <section class="py-20 bg-surface">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="text-accent font-sans font-medium tracking-widest text-sm uppercase mb-2 block">Onze Aanpak</span>
+                    <h2 class="text-3xl font-serif font-bold text-primary">Van Ontwerp tot Oplevering</h2>
+                </div>
+
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-white p-8 border border-black/5">
+                        <p class="text-text-muted leading-relaxed mb-6">
+                            Een tuin is meer dan wat tegels leggen en planten zetten. Of het nu gaat
+                            om een woning of een bedrijfspand: uw buitenruimte verdient aandacht,
+                            comfort en karakter. Daarom denkt DJVerbeekTuinen graag vanaf het begin
+                            met u mee.
+                        </p>
+                        <p class="text-text-muted leading-relaxed mb-6">
+                            Wilt u 's avonds nog kunnen genieten van het buitenleven, gezellig
+                            barbecueën of ontspannen met vrienden? Of zoekt u juist een tuin die
+                            rust biedt en ruimte geeft aan vogels en insecten? Wat uw wensen ook
+                            zijn – wij nemen ze vanaf het ontwerp al mee.
+                        </p>
+                        <p class="text-text-muted leading-relaxed mb-6">
+                            Zodra het ontwerp staat, zorgen wij voor een vlotte aanleg. We pakken
+                            uw tuinproject efficiënt aan, met minimale overlast en een slimme
+                            planning afgestemd op uw situatie.
+                        </p>
+                        <p class="text-primary font-medium">
+                            Omdat wij gewend zijn projecten in één keer op te leveren, hoeft u niet
+                            maanden te wachten op uw droomtuin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 bg-primary text-white text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+            <div class="container mx-auto px-6 max-w-2xl relative z-10">
+                <h2 class="text-3xl font-serif font-bold mb-6 text-white">
+                    Ook uw tuinidee tot leven laten komen?
+                </h2>
+                <p class="text-white/80 mb-8 text-lg">
+                    Twijfelt u nog over uw wensen? Wij denken graag met u mee.
+                </p>
+                <Button href="/contact" class="bg-white text-primary hover:bg-white/90">
+                    Neem Contact Op
+                </Button>
+            </div>
+        </section>
+    </main>
+</Layout>

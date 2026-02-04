@@ -1,0 +1,101 @@
+---
+import Button from "./Button.astro";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Image } from "astro:assets";
+import heroImage from "../assets/images/hero-main.webp";
+
+const benefits = [
+    "3D Tuinontwerp",
+    "Persoonlijke Aanpak",
+    "Gratis Offerte",
+];
+---
+
+<section
+    class="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
+>
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+        <Image
+            src={heroImage}
+            alt="Professioneel aangelegde Nederlandse tuin met terras en groen - DJ Verbeek Tuinen"
+            class="w-full h-full object-cover"
+            widths={[768, 1200, 1920]}
+            sizes="100vw"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+        />
+        <!-- Gradient Overlay for Readability -->
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent"
+        >
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container mx-auto px-6 relative z-10 w-full pt-20">
+        <div class="max-w-3xl">
+            <!-- Badge -->
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 animate-fade-in-up"
+            >
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"
+                ></span>
+                <span
+                    class="text-white/90 text-sm font-medium tracking-wide font-sans"
+                    >Beschikbaar voor projecten in voorjaar 2026</span
+                >
+            </div>
+
+            <!-- Verified Headline -->
+            <h1
+                class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-[1.1] mb-6 drop-shadow-lg tracking-tight"
+            >
+                Rust, Ruimte en <br />
+                <span class="text-green-400">Vakmanschap.</span>
+            </h1>
+
+            <p
+                class="text-lg md:text-xl text-white/90 mb-10 max-w-xl leading-relaxed font-sans font-light"
+            >
+                Van tuinontwerp tot tuinaanleg en grondwerk – wij zijn trots op
+                ons werk. Neem contact met ons op voor een gratis offerte.
+            </p>
+
+            <!-- CTA Group -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-16">
+                <Button href="/contact" size="lg" class="group">
+                    Gratis Offerte
+                    <ArrowRight
+                        className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+                    />
+                </Button>
+                <Button
+                    href="/projecten"
+                    variant="outline"
+                    size="lg"
+                    class="border-white text-white hover:bg-white hover:text-primary hover:border-white"
+                >
+                    Bekijk Ons Werk
+                </Button>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div
+                class="flex flex-col sm:flex-row gap-6 sm:gap-12 border-t border-white/10 pt-8"
+            >
+                {
+                    benefits.map((benefit) => (
+                        <div class="flex items-center gap-3 text-white/90">
+                            <CheckCircle2 className="w-5 h-5 text-green-400" />
+                            <span class="font-medium tracking-wide text-sm md:text-base">
+                                {benefit}
+                            </span>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,237 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import PageHeader from "../components/PageHeader.astro";
+import Button from "../components/Button.astro";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
+---
+
+<Layout title="Contact | DJ Verbeek Tuinen">
+    <Navbar />
+    <main>
+        <PageHeader title="Neem Contact Op" subtitle="Vrijblijvend Advies" />
+
+        <section class="py-20 bg-white relative overflow-hidden">
+            <!-- Decorative Background Elements -->
+            <div class="absolute top-20 -left-20 w-72 h-72 opacity-[0.02] pointer-events-none">
+                <svg viewBox="0 0 200 200" class="w-full h-full text-primary" fill="currentColor">
+                    <path d="M100,20 Q160,60 160,100 Q160,160 100,180 Q40,160 40,100 Q40,60 100,20" stroke="currentColor" stroke-width="1" fill="none"/>
+                    <path d="M100,40 Q140,70 140,100 Q140,140 100,160 Q60,140 60,100 Q60,70 100,40" stroke="currentColor" stroke-width="1" fill="none"/>
+                    <path d="M100,60 Q120,80 120,100 Q120,120 100,140 Q80,120 80,100 Q80,80 100,60" stroke="currentColor" stroke-width="1" fill="none"/>
+                </svg>
+            </div>
+            <div class="absolute bottom-20 -right-20 w-72 h-72 opacity-[0.02] pointer-events-none rotate-180">
+                <svg viewBox="0 0 200 200" class="w-full h-full text-primary" fill="currentColor">
+                    <path d="M100,20 Q160,60 160,100 Q160,160 100,180 Q40,160 40,100 Q40,60 100,20" stroke="currentColor" stroke-width="1" fill="none"/>
+                    <path d="M100,40 Q140,70 140,100 Q140,140 100,160 Q60,140 60,100 Q60,70 100,40" stroke="currentColor" stroke-width="1" fill="none"/>
+                    <path d="M100,60 Q120,80 120,100 Q120,120 100,140 Q80,120 80,100 Q80,80 100,60" stroke="currentColor" stroke-width="1" fill="none"/>
+                </svg>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <!-- Contact Form -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-px bg-primary/30"></div>
+                            <span class="text-accent font-sans font-medium tracking-widest text-xs uppercase">Schrijf ons</span>
+                        </div>
+                        <h2
+                            class="text-2xl font-serif font-bold text-primary mb-6"
+                        >
+                            Stuur ons een bericht
+                        </h2>
+                        <p class="text-text-muted mb-8">
+                            Heeft u plannen voor uw tuin of een vraag over onze
+                            diensten? Vul het formulier in en wij nemen zo snel
+                            mogelijk contact met u op.
+                        </p>
+
+                        <form class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label
+                                        for="name"
+                                        class="block text-sm font-medium text-text-main mb-2"
+                                        >Naam</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        class="w-full px-4 py-3 bg-surface border border-black/5 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                        required
+                                    />
+                                </div>
+                                <div>
+                                    <label
+                                        for="phone"
+                                        class="block text-sm font-medium text-text-main mb-2"
+                                        >Telefoonnummer</label
+                                    >
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        class="w-full px-4 py-3 bg-surface border border-black/5 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                        required
+                                    />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label
+                                    for="email"
+                                    class="block text-sm font-medium text-text-main mb-2"
+                                    >E-mailadres</label
+                                >
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="w-full px-4 py-3 bg-surface border border-black/5 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                    required
+                                />
+                            </div>
+
+                            <div>
+                                <label
+                                    for="service"
+                                    class="block text-sm font-medium text-text-main mb-2"
+                                    >Dienst</label
+                                >
+                                <select
+                                    id="service"
+                                    class="w-full px-4 py-3 bg-surface border border-black/5 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                >
+                                    <option value="">Maak een keuze...</option>
+                                    <option value="aanleg">Tuinaanleg</option>
+                                    <option value="ontwerp">Tuinontwerp</option>
+                                    <option value="onderhoud"
+                                        >Tuinonderhoud</option
+                                    >
+                                    <option value="overig">Anders</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label
+                                    for="message"
+                                    class="block text-sm font-medium text-text-main mb-2"
+                                    >Bericht</label
+                                >
+                                <textarea
+                                    id="message"
+                                    rows="5"
+                                    class="w-full px-4 py-3 bg-surface border border-black/5 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                    required></textarea>
+                            </div>
+
+                            <Button
+                                type="submit"
+                                size="lg"
+                                class="w-full md:w-auto"
+                                >Verstuur Bericht</Button
+                            >
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="lg:pl-12">
+                        <div class="bg-surface p-8 border border-black/5 mb-12">
+                            <h3
+                                class="font-serif font-bold text-xl text-primary mb-2"
+                            >
+                                Contactgegevens
+                            </h3>
+                            <p class="text-text-muted mb-6">Dirk Jan Verbeek</p>
+                            <ul class="space-y-6">
+                                <li class="flex items-start gap-4">
+                                    <div
+                                        class="p-3 bg-white text-primary rounded-sm shadow-sm"
+                                    >
+                                        <Phone className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="block font-medium text-text-main text-sm uppercase tracking-wider mb-1"
+                                            >Telefoon</span
+                                        >
+                                        <a
+                                            href="tel:+31629101019"
+                                            class="text-lg hover:text-primary transition-colors"
+                                            >06 291 01 019</a
+                                        >
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div
+                                        class="p-3 bg-white text-primary rounded-sm shadow-sm"
+                                    >
+                                        <Mail className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="block font-medium text-text-main text-sm uppercase tracking-wider mb-1"
+                                            >E-mail</span
+                                        >
+                                        <a
+                                            href="mailto:Djverbeektuinen@outlook.com"
+                                            class="text-lg hover:text-primary transition-colors"
+                                            >Djverbeektuinen@outlook.com</a
+                                        >
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div
+                                        class="p-3 bg-white text-primary rounded-sm shadow-sm"
+                                    >
+                                        <MapPin className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="block font-medium text-text-main text-sm uppercase tracking-wider mb-1"
+                                            >Adres</span
+                                        >
+                                        <span class="text-lg block"
+                                            >Akkersestraat 3a<br />4061BG
+                                            Ophemert</span
+                                        >
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div
+                                        class="p-3 bg-white text-primary rounded-sm shadow-sm"
+                                    >
+                                        <Clock className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="block font-medium text-text-main text-sm uppercase tracking-wider mb-1"
+                                            >Openingstijden</span
+                                        >
+                                        <span class="text-lg block"
+                                            >Ma t/m Vr: 07:00 - 18:00<br />Za:
+                                            Op afspraak</span
+                                        >
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Google Maps Embed -->
+                        <div class="aspect-video bg-gray-200 w-full overflow-hidden border border-black/5">
+                            <iframe
+                                src="https://maps.google.com/maps?q=Akkersestraat+3a,+4061BG+Ophemert,+Netherlands&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                width="100%"
+                                height="100%"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Locatie DJ Verbeek Tuinen - Akkersestraat 3a, Ophemert"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

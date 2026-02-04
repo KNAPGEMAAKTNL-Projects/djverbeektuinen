@@ -1,0 +1,142 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import Button from "../../components/Button.astro";
+import { Image } from "astro:assets";
+import garden1 from "../../assets/images/garden-1.webp";
+import garden4 from "../../assets/images/garden-4.webp";
+import garden5 from "../../assets/images/garden-5.webp";
+import grondwerk from "../../assets/images/grondwerk.webp";
+import { ArrowLeft, MapPin, Calendar, Ruler } from "lucide-react";
+---
+
+<Layout title="Landelijke Achtertuin | DJ Verbeek Tuinen">
+    <Navbar />
+    <main>
+        <PageHeader title="Landelijke Achtertuin" subtitle="Renovatie" />
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <!-- Back Link -->
+                <a href="/projecten" class="inline-flex items-center gap-2 text-primary hover:text-primary-hover mb-8 transition-colors">
+                    <ArrowLeft className="w-4 h-4" />
+                    <span>Terug naar projecten</span>
+                </a>
+
+                <div class="grid lg:grid-cols-3 gap-12">
+                    <!-- Main Content -->
+                    <div class="lg:col-span-2">
+                        <div class="aspect-[16/10] bg-gray-100 overflow-hidden mb-8">
+                            <Image
+                                src={garden1}
+                                alt="Landelijke achtertuin"
+                                class="w-full h-full object-cover"
+                                quality="high"
+                            />
+                        </div>
+
+                        <h2 class="text-2xl font-serif font-bold text-primary mb-4">Over dit project</h2>
+                        <div class="prose prose-lg text-text-muted max-w-none">
+                            <p>
+                                Deze jaren '70 woning had een verouderde achtertuin die aan renovatie
+                                toe was. De eigenaars wilden een landelijke uitstraling die past bij
+                                de omgeving van de Betuwe, maar met moderne gemakken.
+                            </p>
+                            <p>
+                                We hebben gekozen voor een mix van natuurlijke materialen: gebakken
+                                klinkers in een warme tint, veel groenblijvende beplanting en een
+                                romantische pergola met klimrozen.
+                            </p>
+                            <p>
+                                Het oude schuurtje is vervangen door een nieuw tuinhuis met overkapping,
+                                ideaal voor buiten eten. Een slingerend pad leidt naar de moestuin
+                                achterin, waar de bewoners hun eigen groenten kweken.
+                            </p>
+                        </div>
+
+                        <!-- Gallery -->
+                        <h3 class="text-xl font-serif font-bold text-primary mt-12 mb-6">Meer foto's</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="aspect-square bg-gray-100 overflow-hidden">
+                                <Image
+                                    src={garden4}
+                                    alt="Landelijke tuin detail"
+                                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                />
+                            </div>
+                            <div class="aspect-square bg-gray-100 overflow-hidden">
+                                <Image
+                                    src={garden5}
+                                    alt="Pergola"
+                                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                />
+                            </div>
+                            <div class="aspect-square bg-gray-100 overflow-hidden">
+                                <Image
+                                    src={grondwerk}
+                                    alt="Moestuin"
+                                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="lg:col-span-1">
+                        <div class="bg-surface p-8 border border-black/5 sticky top-24">
+                            <h3 class="font-serif font-bold text-xl text-primary mb-6">Projectdetails</h3>
+
+                            <ul class="space-y-6">
+                                <li class="flex items-start gap-4">
+                                    <div class="p-2 bg-white text-primary rounded-sm">
+                                        <MapPin className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <span class="block text-sm text-text-muted uppercase tracking-wider mb-1">Locatie</span>
+                                        <span class="text-primary font-medium">Beesd</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="p-2 bg-white text-primary rounded-sm">
+                                        <Calendar className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <span class="block text-sm text-text-muted uppercase tracking-wider mb-1">Uitgevoerd</span>
+                                        <span class="text-primary font-medium">Zomer 2024</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="p-2 bg-white text-primary rounded-sm">
+                                        <Ruler className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <span class="block text-sm text-text-muted uppercase tracking-wider mb-1">Oppervlakte</span>
+                                        <span class="text-primary font-medium">±200 m²</span>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="border-t border-black/5 mt-8 pt-8">
+                                <h4 class="font-medium text-primary mb-4">Werkzaamheden</h4>
+                                <ul class="space-y-2 text-text-muted text-sm">
+                                    <li>• Volledige tuinrenovatie</li>
+                                    <li>• Sloop bestaande tuin</li>
+                                    <li>• Gebakken klinkerbestrating</li>
+                                    <li>• Tuinhuis met overkapping</li>
+                                    <li>• Pergola constructie</li>
+                                    <li>• Moestuin aanleg</li>
+                                    <li>• Romantische beplanting</li>
+                                </ul>
+                            </div>
+
+                            <Button href="/contact" class="w-full mt-8">
+                                Vergelijkbaar project?
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

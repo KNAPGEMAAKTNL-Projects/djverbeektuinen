@@ -1,0 +1,71 @@
+---
+import { Menu, Phone } from "lucide-react";
+import Button from "./Button.astro";
+
+const links = [
+    { name: "Home", href: "/" },
+    { name: "Tuinontwerp", href: "/diensten/tuinontwerp" },
+    { name: "Tuinaanleg", href: "/diensten/tuinaanleg" },
+    { name: "Grondwerk", href: "/diensten/grondwerk" },
+    { name: "Contact", href: "/contact" },
+];
+---
+
+<header
+    id="navbar"
+    class="fixed top-0 w-full z-50 transition-all duration-500 bg-white/95 backdrop-blur-sm border-b border-black/5 shadow-sm"
+>
+    <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="/" class="flex flex-col group">
+            <span
+                class="font-serif text-2xl font-bold text-primary tracking-tight group-hover:opacity-80 transition-opacity"
+            >
+                DJ Verbeek
+            </span>
+            <span
+                class="font-sans text-[0.65rem] uppercase tracking-[0.2em] text-text-muted group-hover:text-primary transition-colors"
+            >
+                Tuinen & Bestrating
+            </span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8">
+            {
+                links.map((link) => (
+                    <a
+                        href={link.href}
+                        class="text-sm font-medium text-text-main hover:text-primary transition-colors uppercase tracking-wider relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full"
+                    >
+                        {link.name}
+                    </a>
+                ))
+            }
+        </nav>
+
+        <!-- Desktop Actions -->
+        <div class="hidden md:flex items-center gap-6">
+            <a
+                href="tel:+31629101019"
+                class="flex items-center gap-2 text-text-main hover:text-primary transition-colors group"
+            >
+                <div
+                    class="p-2 rounded-full bg-surface group-hover:bg-primary/10 transition-colors"
+                >
+                    <Phone className="w-4 h-4" />
+                </div>
+                <span class="font-sans font-medium text-sm">06 291 01 019</span>
+            </a>
+            <Button href="/contact" size="sm"> Offerte Aanvragen </Button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+            class="md:hidden p-2 text-primary hover:bg-surface transition-colors"
+            aria-label="Menu"
+        >
+            <Menu className="w-6 h-6" />
+        </button>
+    </div>
+</header>

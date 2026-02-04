@@ -1,0 +1,47 @@
+---
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+interface Props {
+    variant?: "primary" | "secondary" | "outline" | "ghost";
+    size?: "sm" | "md" | "lg";
+    class?: string;
+    href?: string;
+    type?: "button" | "submit" | "reset";
+}
+
+const {
+    variant = "primary",
+    size = "md",
+    class: className,
+    href,
+    type = "button",
+} = Astro.props;
+
+const baseStyles =
+    "inline-flex items-center justify-center font-sans font-medium transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer tracking-wide";
+
+const variants = {
+    primary:
+        "bg-primary text-white hover:bg-primary-hover shadow-lg hover:shadow-xl rounded-none", // 'Rounded-none' for stable artisan feel
+    secondary:
+        "bg-secondary text-white hover:bg-secondary/90 shadow-md rounded-none",
+    outline:
+        "border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-none",
+    ghost: "text-primary hover:bg-primary/10 rounded-sm",
+};
+
+const sizes = {
+    sm: "h-9 px-4 text-sm",
+    md: "h-12 px-6 text-base",
+    lg: "h-14 px-8 text-lg",
+};
+
+const styles = twMerge(baseStyles, variants[variant], sizes[size], className);
+
+const Element = href ? "a" : "button";
+---
+
+<Element href={href} type={!href ? type : undefined} class={styles}>
+    <slot />
+</Element>

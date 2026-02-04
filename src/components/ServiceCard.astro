@@ -1,0 +1,48 @@
+---
+import { ArrowRight } from "lucide-react";
+
+interface Props {
+    title: string;
+    description: string;
+    icon: any; // Lucide icon component
+    href: string;
+}
+
+const { title, description, icon: Icon, href } = Astro.props;
+---
+
+<a
+    href={href}
+    class="group relative bg-white p-8 border border-black/5 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 block h-full"
+>
+    <!-- Hover Indicator -->
+    <div
+        class="absolute top-0 left-0 w-full h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+    >
+    </div>
+
+    <!-- Icon -->
+    <div
+        class="mb-6 p-4 bg-surface w-16 h-16 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+    >
+        <Icon className="w-8 h-8" />
+    </div>
+
+    <!-- Content -->
+    <h3
+        class="text-xl font-serif font-bold text-primary mb-3 group-hover:text-primary-hover transition-colors"
+    >
+        {title}
+    </h3>
+
+    <p class="text-text-muted mb-6 leading-relaxed text-sm">
+        {description}
+    </p>
+
+    <!-- Link interaction -->
+    <div
+        class="flex items-center text-primary font-medium text-sm group-hover:translate-x-2 transition-transform"
+    >
+        Meer informatie <ArrowRight className="w-4 h-4 ml-2" />
+    </div>
+</a>

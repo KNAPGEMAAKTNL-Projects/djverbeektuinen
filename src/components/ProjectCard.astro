@@ -1,0 +1,70 @@
+---
+import { ArrowRight } from "lucide-react";
+
+interface Props {
+    title: string;
+    category: string;
+    image: string | ImageMetadata;
+    href: string;
+}
+
+import { Image } from "astro:assets";
+const { title, category, image, href } = Astro.props;
+---
+
+<a
+    href={href}
+    class="group block overflow-hidden bg-white hover:shadow-xl transition-all duration-500"
+>
+    <!-- Image Container -->
+    <div class="relative h-64 md:h-80 overflow-hidden">
+        <!-- Overlay -->
+        <div
+            class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"
+        >
+        </div>
+
+        {
+            typeof image === "string" ? (
+                <img
+                    src={image}
+                    alt={`${title} - ${category} project door DJ Verbeek Tuinen`}
+                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                    loading="lazy"
+                    decoding="async"
+                />
+            ) : (
+                <Image
+                    src={image}
+                    alt={`${title} - ${category} project door DJ Verbeek Tuinen`}
+                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                    loading="lazy"
+                    decoding="async"
+                />
+            )
+        }
+
+        <!-- Badge -->
+        <div class="absolute top-4 left-4 z-20">
+            <span
+                class="px-3 py-1 bg-white/90 backdrop-blur text-primary text-xs font-medium tracking-wider uppercase"
+            >
+                {category}
+            </span>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="p-6 relative">
+        <h3
+            class="text-2xl font-serif font-bold text-primary mb-2 group-hover:text-primary-hover transition-colors"
+        >
+            {title}
+        </h3>
+        <div
+            class="flex items-center text-accent font-medium text-sm mt-4 group-hover:translate-x-2 transition-transform"
+        >
+            Bekijk Project <ArrowRight className="w-4 h-4 ml-2" />
+        </div>
+    </div>
+</a>

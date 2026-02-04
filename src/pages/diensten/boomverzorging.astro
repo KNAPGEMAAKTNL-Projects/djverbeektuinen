@@ -1,0 +1,106 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import Button from "../../components/Button.astro";
+import { Image } from "astro:assets";
+import garden1 from "../../assets/images/garden-1.webp";
+import { CheckCircle2, Trees } from "lucide-react";
+---
+
+<Layout title="Boomverzorging | DJ Verbeek Tuinen">
+    <Navbar />
+    <main>
+        <PageHeader title="Boomverzorging" subtitle="Veilig & Vakkundig" />
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-px bg-primary/30"></div>
+                            <span class="text-accent font-sans font-medium tracking-widest text-xs uppercase">Boomwerk</span>
+                        </div>
+                        <h2 class="text-3xl font-serif font-bold text-primary mb-6">
+                            Professionele Boomverzorging
+                        </h2>
+                        <div class="space-y-6 text-text-muted leading-relaxed">
+                            <p>
+                                Bomen zijn een waardevolle aanwinst voor elke tuin, maar vragen ook
+                                om de juiste verzorging. Of het nu gaat om regulier snoeiwerk, het
+                                verwijderen van dood hout of het rooien van een boom: wij hebben de
+                                kennis en het materieel in huis.
+                            </p>
+                            <p>
+                                Veiligheid staat bij ons voorop. Wij werken volgens de laatste
+                                richtlijnen en met professioneel materiaal. Ook in lastige situaties
+                                weten wij raad.
+                            </p>
+                        </div>
+
+                        <div class="mt-10 space-y-4">
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Snoeien</span>
+                                    <span class="text-text-muted text-sm">Onderhoudssnoei, opkronen en vormsnoei</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Rooien</span>
+                                    <span class="text-text-muted text-sm">Veilig verwijderen van bomen, inclusief stronk</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Stormschade</span>
+                                    <span class="text-text-muted text-sm">Snelle hulp bij acute situaties</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Advies</span>
+                                    <span class="text-text-muted text-sm">Welke boom past bij uw tuin?</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/10"></div>
+                        <div class="aspect-[4/3] bg-gray-100 overflow-hidden relative z-10">
+                            <Image
+                                src={garden1}
+                                alt="Boomverzorging"
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div class="absolute -top-6 -left-6 bg-primary text-white p-4 z-20">
+                            <Trees className="w-8 h-8" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 bg-primary text-white text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+            <div class="container mx-auto px-6 max-w-2xl relative z-10">
+                <h2 class="text-3xl font-serif font-bold mb-6 text-white">
+                    Boom laten snoeien of verwijderen?
+                </h2>
+                <p class="text-white/80 mb-8 text-lg">
+                    Neem contact op voor vrijblijvend advies of een offerte.
+                </p>
+                <Button href="/contact" class="bg-white text-primary hover:bg-white/90">
+                    Neem Contact Op
+                </Button>
+            </div>
+        </section>
+    </main>
+</Layout>

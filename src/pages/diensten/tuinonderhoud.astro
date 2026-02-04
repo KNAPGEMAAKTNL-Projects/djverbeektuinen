@@ -1,0 +1,140 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import Button from "../../components/Button.astro";
+import { Image } from "astro:assets";
+import garden3 from "../../assets/images/garden-3.webp";
+import { CheckCircle2, Flower2, Calendar, Leaf, Scissors } from "lucide-react";
+---
+
+<Layout title="Tuinonderhoud | DJ Verbeek Tuinen">
+    <Navbar />
+    <main>
+        <PageHeader title="Tuinonderhoud" subtitle="Zorgeloos Genieten" />
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-px bg-primary/30"></div>
+                            <span class="text-accent font-sans font-medium tracking-widest text-xs uppercase">Altijd Verzorgd</span>
+                        </div>
+                        <h2 class="text-3xl font-serif font-bold text-primary mb-6">
+                            Uw Tuin in Topconditie
+                        </h2>
+                        <div class="space-y-6 text-text-muted leading-relaxed">
+                            <p>
+                                Een mooie tuin vraagt om regelmatig onderhoud. Heeft u daar geen tijd
+                                voor of ontbreekt de kennis? Wij nemen het graag van u over. Eenmalig
+                                of op contractbasis: u bepaalt wat bij u past.
+                            </p>
+                            <p>
+                                Met een onderhoudscontract geniet u het hele jaar door van een
+                                verzorgde tuin zonder omkijken. Wij komen op vaste momenten langs
+                                en voeren alle seizoensgebonden werkzaamheden uit.
+                            </p>
+                        </div>
+
+                        <div class="mt-10 space-y-4">
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Snoeiwerk</span>
+                                    <span class="text-text-muted text-sm">Hagen, heesters en vaste planten op het juiste moment</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Gazononderhoud</span>
+                                    <span class="text-text-muted text-sm">Maaien, verticuteren, bemesten en onkruidbestrijding</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Onkruidbeheer</span>
+                                    <span class="text-text-muted text-sm">Borders en bestrating netjes en onkruidvrij</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Seizoensklaar maken</span>
+                                    <span class="text-text-muted text-sm">Voorjaars- en najaarsbeurt voor uw tuin</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/10"></div>
+                        <div class="aspect-[4/3] bg-gray-100 overflow-hidden relative z-10">
+                            <Image
+                                src={garden3}
+                                alt="Tuinonderhoud werkzaamheden"
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div class="absolute -top-6 -left-6 bg-primary text-white p-4 z-20">
+                            <Flower2 className="w-8 h-8" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contract Options -->
+        <section class="py-20 bg-surface">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="text-accent font-sans font-medium tracking-widest text-sm uppercase mb-2 block">Opties</span>
+                    <h2 class="text-3xl font-serif font-bold text-primary">Kies Wat Bij U Past</h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 border border-black/5 text-center">
+                        <div class="w-16 h-16 bg-primary/5 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <Scissors className="w-8 h-8" />
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-primary mb-3">Eenmalig</h3>
+                        <p class="text-text-muted">Grote snoeibeurt, opruimen of tuin weer op orde. Wij helpen u graag.</p>
+                    </div>
+                    <div class="bg-white p-8 border-2 border-primary text-center relative">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-medium px-3 py-1">Populair</div>
+                        <div class="w-16 h-16 bg-primary/5 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <Calendar className="w-8 h-8" />
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-primary mb-3">Onderhoudscontract</h3>
+                        <p class="text-text-muted">Vaste beurten per jaar. Zorgeloos en voordelig.</p>
+                    </div>
+                    <div class="bg-white p-8 border border-black/5 text-center">
+                        <div class="w-16 h-16 bg-primary/5 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <Leaf className="w-8 h-8" />
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-primary mb-3">Seizoensbeurt</h3>
+                        <p class="text-text-muted">Voorjaar of najaar: complete onderhoudsbeurt.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 bg-primary text-white text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+            <div class="container mx-auto px-6 max-w-2xl relative z-10">
+                <h2 class="text-3xl font-serif font-bold mb-6 text-white">
+                    Interesse in een onderhoudscontract?
+                </h2>
+                <p class="text-white/80 mb-8 text-lg">
+                    Wij maken graag een passend voorstel voor uw tuin.
+                </p>
+                <Button href="/contact" class="bg-white text-primary hover:bg-white/90">
+                    Neem Contact Op
+                </Button>
+            </div>
+        </section>
+    </main>
+</Layout>

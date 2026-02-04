@@ -1,0 +1,144 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import Button from "../../components/Button.astro";
+import { CheckCircle2, Mountain } from "lucide-react";
+import { Image } from "astro:assets";
+import grondwerk from "../../assets/images/grondwerk.webp";
+---
+
+<Layout title="Grondwerk | DJ Verbeek Tuinen">
+    <Navbar />
+    <main>
+        <PageHeader title="Grondwerk" subtitle="Een Stevige Basis" />
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-px bg-primary/30"></div>
+                            <span class="text-accent font-sans font-medium tracking-widest text-xs uppercase">Fundament</span>
+                        </div>
+                        <h2 class="text-3xl font-serif font-bold text-primary mb-6">
+                            Een Goede Basis voor uw Buitenleven
+                        </h2>
+                        <div class="space-y-6 text-text-muted leading-relaxed">
+                            <p>
+                                Wilt u uw tuin opnieuw inrichten, maar moet er eerst nog flink wat
+                                grond worden verzet? Of heeft u plannen voor een buitenverblijf,
+                                terwijl het grondwerk nog moet worden aangepakt?
+                            </p>
+                            <p>
+                                Bij DJVerbeekTuinen weten we precies wat er nodig is om een stevige
+                                en nette basis te leggen. Of het nu gaat om uitgraven, egaliseren of
+                                voorbereidend werk voor bestrating of bouw – wij zorgen dat alles
+                                tot in de bodem goed zit.
+                            </p>
+                            <p>
+                                De (her)inrichting van de buitenruimte rondom uw woning of bedrijfspand
+                                begint bij een goede fundering. Grondwerk vormt daarin een cruciale
+                                eerste stap. Het af- en aanvoeren van grond en zand vraagt om vakkennis,
+                                de juiste machines én efficiënte uitvoering.
+                            </p>
+                        </div>
+
+                        <div class="mt-10 space-y-4">
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Uitgraven & Egaliseren</span>
+                                    <span class="text-text-muted text-sm">Voorbereiding voor bestrating, overkapping of bouw</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Grond Af- en Aanvoeren</span>
+                                    <span class="text-text-muted text-sm">Vakkundig en efficiënt met eigen machines</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Grondverbetering</span>
+                                    <span class="text-text-muted text-sm">Optimale bodem voor bomen en beplanting</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Hoogteverschillen Creëren</span>
+                                    <span class="text-text-muted text-sm">Maak uw tuin interessanter en levendiger</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/10"></div>
+                        <div class="aspect-[4/3] bg-gray-100 overflow-hidden relative z-10">
+                            <Image
+                                src={grondwerk}
+                                alt="Grondwerk uitvoering"
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div class="absolute -top-6 -left-6 bg-primary text-white p-4 z-20">
+                            <Mountain className="w-8 h-8" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Groundwork -->
+        <section class="py-20 bg-surface">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="text-accent font-sans font-medium tracking-widest text-sm uppercase mb-2 block">Belangrijk</span>
+                    <h2 class="text-3xl font-serif font-bold text-primary">Goed Grondwerk is Noodzakelijk</h2>
+                </div>
+
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-white p-8 border border-black/5">
+                        <p class="text-text-muted leading-relaxed mb-6">
+                            Bij het plannen van uw tuin of terrein blijkt vaak dat grondwerk een
+                            onmisbare eerste stap is. Zand ligt soms precies waar grond nodig is –
+                            of andersom. Door hier vooraf goed over na te denken, voorkomt u
+                            problemen tijdens de aanleg.
+                        </p>
+                        <p class="text-text-muted leading-relaxed mb-6">
+                            Is uw tuin erg zanderig of is er vooral zand gebruikt bij de aanleg?
+                            En wilt u de bodem verbeteren voor bijvoorbeeld bomen of beplanting?
+                            DJVerbeekTuinen voert graag de nodige grondverbetering voor u uit,
+                            zodat uw tuin optimaal kan groeien en bloeien.
+                        </p>
+                        <p class="text-primary font-medium">
+                            Kortom: voordat u begint met de (her)inrichting, is het verstandig
+                            om eerst het grondwerk goed aan te pakken.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 bg-primary text-white text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+            <div class="container mx-auto px-6 max-w-2xl relative z-10">
+                <h2 class="text-3xl font-serif font-bold mb-6 text-white">
+                    Grondwerk nodig voor uw project?
+                </h2>
+                <p class="text-white/80 mb-8 text-lg">
+                    Heeft u zelf niet de juiste middelen of kennis in huis?
+                    DJVerbeekTuinen staat voor u klaar.
+                </p>
+                <Button href="/contact" class="bg-white text-primary hover:bg-white/90">
+                    Neem Contact Op
+                </Button>
+            </div>
+        </section>
+    </main>
+</Layout>

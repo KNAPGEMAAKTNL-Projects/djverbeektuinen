@@ -1,0 +1,99 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import ServiceCard from "../../components/ServiceCard.astro";
+import Button from "../../components/Button.astro";
+import {
+    PencilRuler,
+    Shovel,
+    Mountain,
+} from "lucide-react";
+
+const services = [
+    {
+        title: "Tuinontwerp",
+        description:
+            "Wij komen bij u langs om uw wensen in kaart te brengen en maken een gedetailleerd 3D-ontwerp van uw toekomstige tuin.",
+        icon: PencilRuler,
+        href: "/diensten/tuinontwerp",
+    },
+    {
+        title: "Tuinaanleg",
+        description:
+            "Van ontwerp tot oplevering. Wij combineren straatwerk, borders, bomen en buitenverblijven tot een tuin waarin u echt tot rust kunt komen.",
+        icon: Shovel,
+        href: "/diensten/tuinaanleg",
+    },
+    {
+        title: "Grondwerk",
+        description:
+            "Een goede basis voor uw buitenleven. Of het nu gaat om uitgraven, egaliseren of voorbereidend werk – wij zorgen dat alles tot in de bodem goed zit.",
+        icon: Mountain,
+        href: "/diensten/grondwerk",
+    },
+];
+---
+
+<Layout title="Diensten | DJ Verbeek Tuinen">
+    <Navbar />
+    <main>
+        <PageHeader title="Onze Diensten" subtitle="Vakmanschap in Groen" />
+
+        <section class="py-20 bg-white relative overflow-hidden">
+            <!-- Decorative Pattern -->
+            <div class="absolute top-1/2 -translate-y-1/2 -right-20 w-96 h-96 opacity-[0.02] pointer-events-none">
+                <svg viewBox="0 0 200 200" class="w-full h-full text-primary" fill="currentColor">
+                    <circle cx="100" cy="100" r="80" stroke="currentColor" stroke-width="0.5" fill="none"/>
+                    <circle cx="100" cy="100" r="60" stroke="currentColor" stroke-width="0.5" fill="none"/>
+                    <circle cx="100" cy="100" r="40" stroke="currentColor" stroke-width="0.5" fill="none"/>
+                    <circle cx="100" cy="100" r="20" stroke="currentColor" stroke-width="0.5" fill="none"/>
+                </svg>
+            </div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {services.map((service) => <ServiceCard {...service} />)}
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-surface border-t border-black/5 relative overflow-hidden">
+            <!-- Decorative Leaf Pattern -->
+            <div class="absolute -left-10 top-1/2 -translate-y-1/2 w-40 h-40 opacity-[0.04] pointer-events-none rotate-45">
+                <svg viewBox="0 0 100 100" fill="currentColor" class="text-primary w-full h-full">
+                    <path d="M50,95 C50,95 15,70 15,35 C15,15 30,5 50,5 C70,5 85,15 85,35 C85,70 50,95 50,95" stroke="currentColor" stroke-width="1" fill="none"/>
+                    <path d="M50,5 L50,95" stroke="currentColor" stroke-width="0.5" fill="none"/>
+                </svg>
+            </div>
+            <div class="absolute -right-10 top-1/2 -translate-y-1/2 w-40 h-40 opacity-[0.04] pointer-events-none -rotate-45">
+                <svg viewBox="0 0 100 100" fill="currentColor" class="text-primary w-full h-full">
+                    <path d="M50,95 C50,95 15,70 15,35 C15,15 30,5 50,5 C70,5 85,15 85,35 C85,70 50,95 50,95" stroke="currentColor" stroke-width="1" fill="none"/>
+                    <path d="M50,5 L50,95" stroke="currentColor" stroke-width="0.5" fill="none"/>
+                </svg>
+            </div>
+
+            <div class="container mx-auto px-6 text-center max-w-2xl relative z-10">
+                <!-- Decorative Element -->
+                <div class="flex items-center justify-center gap-3 mb-8">
+                    <div class="w-8 h-px bg-primary/30"></div>
+                    <svg class="w-6 h-6 text-primary/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2C12 2 8 6 8 10C8 14 12 22 12 22C12 22 16 14 16 10C16 6 12 2 12 2Z"/>
+                        <path d="M12 8V14"/>
+                    </svg>
+                    <div class="w-8 h-px bg-primary/30"></div>
+                </div>
+
+                <h2 class="text-3xl font-serif font-bold text-primary mb-6">
+                    Staat uw klus er niet tussen?
+                </h2>
+                <p class="text-text-muted mb-8 leading-relaxed">
+                    Als allround hoveniersbedrijf kunnen we vrijwel alles in en
+                    om de tuin realiseren. Neem contact op om uw specifieke
+                    wensen te bespreken.
+                </p>
+                <Button href="/contact">Neem Contact Op</Button>
+            </div>
+        </section>
+    </main>
+</Layout>

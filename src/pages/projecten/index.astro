@@ -1,0 +1,124 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import Button from "../../components/Button.astro";
+
+// Images
+import portfolio1 from "../../assets/images/portfolio-1.avif";
+import portfolio2 from "../../assets/images/portfolio-2.avif";
+import garden1 from "../../assets/images/garden-1.webp";
+import garden2 from "../../assets/images/garden-2.webp";
+import garden3 from "../../assets/images/garden-3.webp";
+import garden5 from "../../assets/images/garden-5.webp";
+
+const projects = [
+    {
+        title: "Moderne Stadstuin",
+        category: "Tuinaanleg",
+        image: portfolio1,
+        href: "/projecten/moderne-stadstuin",
+    },
+    {
+        title: "Vrijstaande Villatuin",
+        category: "Tuinontwerp",
+        image: portfolio2,
+        href: "/projecten/vrijstaande-villatuin",
+    },
+    {
+        title: "Grondwerk Project",
+        category: "Grondwerk",
+        image: garden3,
+        href: "/projecten/bedrijfstuin",
+    },
+    {
+        title: "Landelijke Achtertuin",
+        category: "Tuinaanleg",
+        image: garden1,
+        href: "/projecten/landelijke-achtertuin",
+    },
+    {
+        title: "Tuinrenovatie",
+        category: "Tuinontwerp",
+        image: garden2,
+        href: "/projecten/sierbestrating",
+    },
+    {
+        title: "Complete Tuinaanleg",
+        category: "Tuinaanleg",
+        image: garden5,
+        href: "/projecten/overkapping",
+    },
+];
+---
+
+<Layout title="Projecten | DJ Verbeek Tuinen">
+    <Navbar />
+    <main>
+        <PageHeader title="Onze Projecten" subtitle="Recente Realisaties" />
+
+        <section class="py-20 bg-white relative overflow-hidden">
+            <!-- Decorative Elements -->
+            <div class="absolute top-0 left-0 w-40 h-40 border-l border-t border-primary/5 pointer-events-none"></div>
+            <div class="absolute bottom-0 right-0 w-40 h-40 border-r border-b border-primary/5 pointer-events-none"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <!-- Filter Mockup -->
+                <div class="flex flex-wrap gap-4 mb-12 justify-center">
+                    <button
+                        class="px-6 py-2 bg-primary text-white rounded-none font-medium text-sm"
+                        >Alles</button
+                    >
+                    <button
+                        class="px-6 py-2 bg-surface text-text-main hover:bg-black/5 rounded-none font-medium text-sm transition-colors"
+                        >Tuinaanleg</button
+                    >
+                    <button
+                        class="px-6 py-2 bg-surface text-text-main hover:bg-black/5 rounded-none font-medium text-sm transition-colors"
+                        >Tuinontwerp</button
+                    >
+                    <button
+                        class="px-6 py-2 bg-surface text-text-main hover:bg-black/5 rounded-none font-medium text-sm transition-colors"
+                        >Onderhoud</button
+                    >
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {projects.map((project) => <ProjectCard {...project} />)}
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-primary text-white text-center relative overflow-hidden">
+            <!-- Decorative Pattern -->
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-12 bg-gradient-to-b from-transparent to-white/20"></div>
+
+            <div class="container mx-auto px-6 max-w-2xl relative z-10">
+                <!-- Decorative Element -->
+                <div class="flex items-center justify-center gap-3 mb-8">
+                    <div class="w-8 h-px bg-white/30"></div>
+                    <svg class="w-5 h-5 text-white/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2C12 2 8 6 8 10C8 14 12 22 12 22C12 22 16 14 16 10C16 6 12 2 12 2Z"/>
+                    </svg>
+                    <div class="w-8 h-px bg-white/30"></div>
+                </div>
+
+                <h2 class="text-3xl font-serif font-bold mb-6 text-white">
+                    Klaar voor uw eigen project?
+                </h2>
+                <p class="text-white/80 mb-8 text-lg">
+                    Laat u inspireren en informeren over de mogelijkheden voor
+                    uw tuin.
+                </p>
+                <Button
+                    href="/contact"
+                    class="bg-white text-primary hover:bg-white/90"
+                >
+                    Start Uw Project
+                </Button>
+            </div>
+        </section>
+    </main>
+</Layout>

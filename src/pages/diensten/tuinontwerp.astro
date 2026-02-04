@@ -1,0 +1,167 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import Button from "../../components/Button.astro";
+import { CheckCircle2, PencilRuler } from "lucide-react";
+import { Image } from "astro:assets";
+import tuinontwerp3d from "../../assets/images/tuinontwerp-3d.webp";
+import garden1 from "../../assets/images/garden-1.webp";
+import garden2 from "../../assets/images/garden-2.webp";
+import garden4 from "../../assets/images/garden-4.webp";
+---
+
+<Layout title="Tuinontwerp | DJ Verbeek Tuinen">
+    <Navbar />
+    <main>
+        <PageHeader title="Tuinontwerp" subtitle="Van Droom naar 3D" />
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-px bg-primary/30"></div>
+                            <span class="text-accent font-sans font-medium tracking-widest text-xs uppercase">3D Tuinontwerp</span>
+                        </div>
+                        <h2 class="text-3xl font-serif font-bold text-primary mb-6">
+                            Uw Droomtuin Vorm Geven
+                        </h2>
+                        <div class="space-y-6 text-text-muted leading-relaxed">
+                            <p>
+                                Bij DJVerbeekTuinen bent u aan het juiste adres voor het realiseren
+                                van een uniek en persoonlijk tuinontwerp. Wij komen graag bij u langs
+                                om uw wensen in kaart te brengen en het perceel zorgvuldig te bekijken.
+                            </p>
+                            <p>
+                                Op basis daarvan maken wij een gedetailleerd 3D-ontwerp van uw
+                                toekomstige tuin. Na uw definitieve goedkeuring vormt dit ontwerp
+                                de perfecte basis voor een nieuw hoofdstuk van genieten in uw
+                                buitenruimte.
+                            </p>
+                            <p>
+                                Voordat een tuin echt vorm krijgt, is het belangrijk om goed na te
+                                denken over wat u van uw buitenruimte verwacht. Maar dat is niet
+                                altijd makkelijk, zeker als u het zich nog niet goed kunt voorstellen.
+                                DJVerbeekTuinen helpt u daarom graag met een 3D-tuinontwerp.
+                            </p>
+                        </div>
+
+                        <div class="mt-10 space-y-4">
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Persoonlijk Gesprek</span>
+                                    <span class="text-text-muted text-sm">Wij komen bij u langs om uw wensen te bespreken</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">3D Visualisatie</span>
+                                    <span class="text-text-muted text-sm">Zie precies hoe uw droomtuin eruit komt te zien</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Duidelijke Kosten</span>
+                                    <span class="text-text-muted text-sm">U weet direct waar u aan toe bent qua budget</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Elke Stijl Mogelijk</span>
+                                    <span class="text-text-muted text-sm">Van strak modern tot romantische Engelse tuin</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/10"></div>
+                        <div class="aspect-[4/3] bg-gray-100 overflow-hidden relative z-10">
+                            <Image
+                                src={tuinontwerp3d}
+                                alt="3D Tuinontwerp visualisatie"
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div class="absolute -top-6 -left-6 bg-primary text-white p-4 z-20">
+                            <PencilRuler className="w-8 h-8" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Styles -->
+        <section class="py-20 bg-surface">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="text-accent font-sans font-medium tracking-widest text-sm uppercase mb-2 block">Mogelijkheden</span>
+                    <h2 class="text-3xl font-serif font-bold text-primary">Uw Buitenparadijs Visueel Gemaakt</h2>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 border border-black/5">
+                            <h3 class="font-serif font-bold text-xl text-primary mb-4">Strak & Modern</h3>
+                            <p class="text-text-muted">
+                                Strakke lijnen, moderne bestrating en minimalistisch groen.
+                                Een onderhoudsvriendelijke tuin met een tijdloze uitstraling.
+                            </p>
+                        </div>
+                        <div class="bg-white p-8 border border-black/5">
+                            <h3 class="font-serif font-bold text-xl text-primary mb-4">Engelse Stijl</h3>
+                            <p class="text-text-muted">
+                                Kronkelende paden, vijvers en weelderige beplanting.
+                                Een romantische tuin vol kleur en leven.
+                            </p>
+                        </div>
+                        <div class="bg-white p-8 border border-black/5">
+                            <h3 class="font-serif font-bold text-xl text-primary mb-4">Natuurlijke Tuin</h3>
+                            <p class="text-text-muted">
+                                Een tuin die dieren aantrekt en biodiversiteit stimuleert.
+                                Genieten van vlinders, vogels en bijen.
+                            </p>
+                        </div>
+                        <div class="bg-white p-8 border border-black/5">
+                            <h3 class="font-serif font-bold text-xl text-primary mb-4">Leeftuin</h3>
+                            <p class="text-text-muted">
+                                Buitenverblijf, moestuin of barbecueplek.
+                                Een tuin waar u tot laat in het seizoen van geniet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-text-muted max-w-2xl mx-auto">
+                        Of het nu gaat om een grote of kleine tuin, een bedrijfstuin of zelfs een
+                        balkon – wij maken een visueel ontwerp waarmee u precies kunt zien hoe uw
+                        droomtuin eruit komt te zien.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 bg-primary text-white text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+            <div class="container mx-auto px-6 max-w-2xl relative z-10">
+                <h2 class="text-3xl font-serif font-bold mb-6 text-white">
+                    Klaar om uw droomtuin te visualiseren?
+                </h2>
+                <p class="text-white/80 mb-8 text-lg">
+                    Neem contact op voor een vrijblijvend kennismakingsgesprek.
+                    Samen brengen we uw ideale buitenruimte tot leven.
+                </p>
+                <Button href="/contact" class="bg-white text-primary hover:bg-white/90">
+                    Plan een Afspraak
+                </Button>
+            </div>
+        </section>
+    </main>
+</Layout>

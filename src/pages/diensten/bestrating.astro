@@ -1,0 +1,134 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import Button from "../../components/Button.astro";
+import { Image } from "astro:assets";
+import garden2 from "../../assets/images/garden-2.webp";
+import { CheckCircle2, LayoutGrid } from "lucide-react";
+---
+
+<Layout title="Sierbestrating | DJ Verbeek Tuinen">
+    <Navbar />
+    <main>
+        <PageHeader title="Sierbestrating" subtitle="Strak & Duurzaam" />
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-px bg-primary/30"></div>
+                            <span class="text-accent font-sans font-medium tracking-widest text-xs uppercase">Vakwerk</span>
+                        </div>
+                        <h2 class="text-3xl font-serif font-bold text-primary mb-6">
+                            Bestrating met Karakter
+                        </h2>
+                        <div class="space-y-6 text-text-muted leading-relaxed">
+                            <p>
+                                Een goed aangelegd terras of pad is de basis van elke tuin.
+                                Wij leggen sierbestrating die niet alleen mooi oogt, maar ook
+                                jarenlang vlak en stevig blijft liggen.
+                            </p>
+                            <p>
+                                Van strakke betontegels tot warme gebakken klinkers en van
+                                natuursteen tot keramiek: wij adviseren u over de beste keuze
+                                voor uw situatie en leggen het vakkundig aan.
+                            </p>
+                        </div>
+
+                        <div class="mt-10 space-y-4">
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Terrassen</span>
+                                    <span class="text-text-muted text-sm">Uw buitenwoonkamer, vakkundig aangelegd</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Opritten</span>
+                                    <span class="text-text-muted text-sm">Duurzaam en bestand tegen zwaar verkeer</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Tuinpaden</span>
+                                    <span class="text-text-muted text-sm">Functioneel en sfeervol door uw tuin</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Traptreden</span>
+                                    <span class="text-text-muted text-sm">Hoogteverschillen elegant overbrugd</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/10"></div>
+                        <div class="aspect-[4/3] bg-gray-100 overflow-hidden relative z-10">
+                            <Image
+                                src={garden2}
+                                alt="Sierbestrating"
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div class="absolute -top-6 -left-6 bg-primary text-white p-4 z-20">
+                            <LayoutGrid className="w-8 h-8" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Materials -->
+        <section class="py-20 bg-surface">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="text-accent font-sans font-medium tracking-widest text-sm uppercase mb-2 block">Materialen</span>
+                    <h2 class="text-3xl font-serif font-bold text-primary">Populaire Keuzes</h2>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 border border-black/5 text-center">
+                        <h3 class="font-serif font-bold text-primary mb-2">Betontegels</h3>
+                        <p class="text-text-muted text-sm">Strak, modern en onderhoudsvriendelijk</p>
+                    </div>
+                    <div class="bg-white p-6 border border-black/5 text-center">
+                        <h3 class="font-serif font-bold text-primary mb-2">Gebakken Klinkers</h3>
+                        <p class="text-text-muted text-sm">Warm, tijdloos en kleurvast</p>
+                    </div>
+                    <div class="bg-white p-6 border border-black/5 text-center">
+                        <h3 class="font-serif font-bold text-primary mb-2">Natuursteen</h3>
+                        <p class="text-text-muted text-sm">Uniek en karaktervol</p>
+                    </div>
+                    <div class="bg-white p-6 border border-black/5 text-center">
+                        <h3 class="font-serif font-bold text-primary mb-2">Keramiek</h3>
+                        <p class="text-text-muted text-sm">Dun, sterk en onderhoudsarm</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 bg-primary text-white text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+            <div class="container mx-auto px-6 max-w-2xl relative z-10">
+                <h2 class="text-3xl font-serif font-bold mb-6 text-white">
+                    Nieuw terras of oprit?
+                </h2>
+                <p class="text-white/80 mb-8 text-lg">
+                    Vraag vrijblijvend een offerte aan.
+                </p>
+                <Button href="/contact" class="bg-white text-primary hover:bg-white/90">
+                    Vraag Offerte Aan
+                </Button>
+            </div>
+        </section>
+    </main>
+</Layout>

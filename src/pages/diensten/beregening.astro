@@ -1,0 +1,130 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import Button from "../../components/Button.astro";
+import { Image } from "astro:assets";
+import garden4 from "../../assets/images/garden-4.webp";
+import { CheckCircle2, Droplets } from "lucide-react";
+---
+
+<Layout title="Beregening | DJ Verbeek Tuinen">
+    <Navbar />
+    <main>
+        <PageHeader title="Beregening" subtitle="Automatisch Sproeigemak" />
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-px bg-primary/30"></div>
+                            <span class="text-accent font-sans font-medium tracking-widest text-xs uppercase">Slimme Oplossing</span>
+                        </div>
+                        <h2 class="text-3xl font-serif font-bold text-primary mb-6">
+                            Zorgeloos Water Geven
+                        </h2>
+                        <div class="space-y-6 text-text-muted leading-relaxed">
+                            <p>
+                                Een automatisch beregeningssysteem bespaart u tijd en zorgt dat uw
+                                tuin altijd de juiste hoeveelheid water krijgt. Ook als u op vakantie
+                                bent of een drukke periode heeft.
+                            </p>
+                            <p>
+                                Wij ontwerpen en installeren beregeningssystemen op maat. Van
+                                eenvoudige druppelslangen tot complete pop-up sproeiers met slimme
+                                bediening. Energiezuinig en waterbewust.
+                            </p>
+                        </div>
+
+                        <div class="mt-10 space-y-4">
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Pop-up Sproeiers</span>
+                                    <span class="text-text-muted text-sm">Onzichtbaar weggewerkt, perfecte dekking</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Druppelirrigatie</span>
+                                    <span class="text-text-muted text-sm">Ideaal voor borders en moestuinen</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Slimme Besturing</span>
+                                    <span class="text-text-muted text-sm">Tijdklok of app-gestuurde systemen</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
+                                <div>
+                                    <span class="font-medium text-primary block">Regensensor</span>
+                                    <span class="text-text-muted text-sm">Automatisch uitschakelen bij regen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/10"></div>
+                        <div class="aspect-[4/3] bg-gray-100 overflow-hidden relative z-10">
+                            <Image
+                                src={garden4}
+                                alt="Beregeningssysteem"
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div class="absolute -top-6 -left-6 bg-primary text-white p-4 z-20">
+                            <Droplets className="w-8 h-8" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="py-20 bg-surface">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="text-accent font-sans font-medium tracking-widest text-sm uppercase mb-2 block">Voordelen</span>
+                    <h2 class="text-3xl font-serif font-bold text-primary">Waarom Automatische Beregening?</h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 border border-black/5 text-center">
+                        <div class="text-4xl font-serif font-bold text-primary mb-2">70%</div>
+                        <p class="text-text-muted">minder waterverbruik dan handmatig sproeien</p>
+                    </div>
+                    <div class="bg-white p-8 border border-black/5 text-center">
+                        <div class="text-4xl font-serif font-bold text-primary mb-2">24/7</div>
+                        <p class="text-text-muted">uw tuin wordt verzorgd, ook als u er niet bent</p>
+                    </div>
+                    <div class="bg-white p-8 border border-black/5 text-center">
+                        <div class="text-4xl font-serif font-bold text-primary mb-2">100%</div>
+                        <p class="text-text-muted">gelijkmatige waterverdeling over uw tuin</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 bg-primary text-white text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+            <div class="container mx-auto px-6 max-w-2xl relative z-10">
+                <h2 class="text-3xl font-serif font-bold mb-6 text-white">
+                    Interesse in automatische beregening?
+                </h2>
+                <p class="text-white/80 mb-8 text-lg">
+                    Wij adviseren u graag over de mogelijkheden voor uw tuin.
+                </p>
+                <Button href="/contact" class="bg-white text-primary hover:bg-white/90">
+                    Vraag Advies Aan
+                </Button>
+            </div>
+        </section>
+    </main>
+</Layout>
